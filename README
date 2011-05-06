@@ -1,11 +1,21 @@
-Learn iPad view controller from basic split view controller
+
+******************************************************************************************
+Email    apple.dev.sh@gmail.com
+Sina Weibo http://t.sina.com.cn/iosgeek
+http://twitter.com/design4apple
+******************************************************************************************
 
 
-1. autorelease array of NSArray 
+Purpose:
 
-dangerous to use 
-
-
-2.Test ASIHttpRequest + RSS parser 
+Test ASIHttpRequest + RSS parser 
 start from https://github.com/greenisus/cocoa-rss
+
+My Changes:
+
+1. Use UIWebView to display HTML content instead of parsing them with a lot efforts
+
+2. Display Feed items from table view
+
+
 

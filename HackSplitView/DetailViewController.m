@@ -25,6 +25,8 @@
 
 @synthesize popoverController=_myPopoverController;
 
+@synthesize webView;
+
 #pragma mark - Managing the detail item
 
 /*

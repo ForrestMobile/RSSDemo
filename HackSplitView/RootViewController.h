@@ -11,10 +11,10 @@
 @class DetailViewController;
 
 @interface RootViewController : UITableViewController {
-
+    NSMutableArray  *feedItems;
 }
 
 		
 @property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
-
+@property (nonatomic, retain) NSMutableArray  *feedItems;
 @end

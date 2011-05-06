@@ -1,0 +1,11 @@
+Learn iPad view controller from basic split view controller
+
+
+1. autorelease array of NSArray 
+
+dangerous to use 
+
+
+2.Test ASIHttpRequest + RSS parser 
+start from https://github.com/greenisus/cocoa-rss
+

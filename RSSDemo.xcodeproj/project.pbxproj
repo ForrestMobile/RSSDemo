@@ -155,10 +155,8 @@
 			children = (
 				A84E275C1373DB640098738B /* HackSplitViewAppDelegate.h */,
 				A84E275D1373DB640098738B /* HackSplitViewAppDelegate.m */,
-				A84E275F1373DB640098738B /* MainWindow.xib */,
 				A84E27621373DB640098738B /* DetailViewController.h */,
 				A84E27631373DB640098738B /* DetailViewController.m */,
-				A84E27651373DB640098738B /* DetailView.xib */,
 				A84E27681373DB640098738B /* RootViewController.h */,
 				A84E27691373DB640098738B /* RootViewController.m */,
 				A84E27541373DB640098738B /* Supporting Files */,
@@ -170,6 +168,8 @@
 		A84E27541373DB640098738B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A84E27651373DB640098738B /* DetailView.xib */,
+				A84E275F1373DB640098738B /* MainWindow.xib */,
 				A84E27551373DB640098738B /* RSSDemo-Info.plist */,
 				A84E27561373DB640098738B /* InfoPlist.strings */,
 				A84E27591373DB640098738B /* RSSDemo-Prefix.pch */,

@@ -50,12 +50,13 @@
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
 	
 //	<pubDate>Fri, 15 Jan 2010 16:16:59 -0600</pubDate>
-	
+	NSLog(@"elementName %@", elementName);
 	if ([elementName isEqualToString:@"item"]) {
 		[self.feedItems addObject:self.feedItem];
 		parsingItem = NO;
 	} else if ([elementName isEqualToString:@"title"]) {		
 		feedItem.title = [currentElementValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
 	} else if ([elementName isEqualToString:@"link"]) {
 		feedItem.link = [currentElementValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	} else if ([elementName isEqualToString:@"guid"]) {

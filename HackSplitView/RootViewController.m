@@ -13,6 +13,10 @@
 #import "RSSParser.h"
 #import "FeedItem.h"
 
+static NSString *HANHAN_BLOG = @"http://blog.sina.com.cn/rss/1191258123.xml";
+static NSString *TEST_RSS = @"http://building43.com/feed";
+static NSString *WANG_BLOG = @"http://blog.sina.com.cn/rss/1273972353.xml";
+
 @implementation RootViewController
 		
 @synthesize detailViewController;
@@ -58,7 +62,7 @@
     }
     
     // Load the Building43 RSS Feed
-    NSURL *url = [NSURL URLWithString:@"http://building43.com/feed"];
+    NSURL *url = [NSURL URLWithString:WANG_BLOG];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request setDelegate:self];
     [request startAsynchronous];
@@ -157,21 +161,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here -- for example, create and push another view controller.
-    
-//    if (!detailViewController) {
-//        detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailView.xib" bundle:nil];
-//    }
-//     // ...
-//     // Pass the selected object to the new view controller.
-//     [self.navigationController pushViewController:detailViewController animated:YES];
-//     //[detailViewController release];
- 
+{ 
     if (detailViewController) {
         FeedItem *item = (FeedItem*)[feedItems objectAtIndex:indexPath.row];
-        //detailViewController.detailItem = [item.content description];
-        [detailViewController.webView loadHTMLString:item.content baseURL:nil];
+//        [detailViewController.webView loadHTMLString:item.content baseURL:nil];
+        [detailViewController.webView loadHTMLString:item.description baseURL:nil];
+
+        NSLog(@"feedItem %@",item.link);
+        //[detailViewController.webView loadRequest:[NSURLRequest requestWithURL: [NSURL URLWithString:item.link] ]];
+        
     }
 }
 
